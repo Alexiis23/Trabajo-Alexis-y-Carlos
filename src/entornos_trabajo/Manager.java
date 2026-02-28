@@ -1,44 +1,19 @@
 package entornos_trabajo;
 
-public class Manager {
+public class Manager extends Employee {
 
-    private String nombre;
-    private double salario;
-    private String departamento;
     private int empleadosACargo;
 
     public Manager() {
+        super();
     }
 
     public Manager(String nombre, double salario, String departamento, int empleadosACargo) {
-        this.nombre = nombre;
-        this.salario = salario;
-        this.departamento = departamento;
+        super();
+        setNombre(nombre);
+        setSalario(salario);
+        setDepartamento(departamento);
         this.empleadosACargo = empleadosACargo;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
-    public String getDepartamento() {
-        return departamento;
-    }
-
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
     }
 
     public int getEmpleadosACargo() {
@@ -49,7 +24,8 @@ public class Manager {
         this.empleadosACargo = empleadosACargo;
     }
 
+    @Override
     public void calcularSalarioAnual() {
-        System.out.println(salario * 12 + empleadosACargo * 1000);
+        System.out.println(getSalario() * 12 + empleadosACargo * 1000);
     }
 }
