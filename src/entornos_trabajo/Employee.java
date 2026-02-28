@@ -39,7 +39,7 @@ public class Employee {
         this.departamento = departamento;
     }
 
-    public void calcularSalarioAnual() {
-        System.out.println(salario * 12);
+    public double calcularSalarioAnual() {
+        return salario * 12;
     }
 }
